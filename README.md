@@ -1,28 +1,22 @@
-# sv
+# vdruid50-gaming-front-end
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Website for Streaming profile and game reviews
 
-## Creating a project
+A hub for my Twitch channel ([VDruid50](https://www.twitch.tv/vdruid50)) and stream schedule, plus written reviews of console and mobile games.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Tech Stack
 
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv@0.17.1 create --template minimal --types ts --add prettier eslint sveltekit-adapter="adapter:netlify" --install npm .
-```
+- [SvelteKit](https://svelte.dev/docs/kit) (Svelte 5) with TypeScript
+- Firebase (back end, separate repo)
+- Deployed on Netlify via `@sveltejs/adapter-netlify`
+- Prettier and ESLint
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Install dependencies, then start the development server:
 
 ```sh
+npm install
 npm run dev
 
 # or start the server and open the app in a new browser tab
@@ -31,7 +25,7 @@ npm run dev -- --open
 
 ## Building
 
-To create a production version of your app:
+To create a production version of the app:
 
 ```sh
 npm run build
@@ -39,4 +33,10 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Recreating This Setup
+
+This project was scaffolded with:
+
+```sh
+npx sv@0.17.1 create --template minimal --types ts --add prettier eslint sveltekit-adapter="adapter:netlify" --install npm .
+```
